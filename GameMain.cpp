@@ -1,11 +1,11 @@
 #include"Pazzle.h"
 
-// ãƒ¡ã‚¤ãƒ³ã‚²ãƒ¼ãƒ ã®å‡¦ç†
+// ƒƒCƒ“ƒQ[ƒ€‚Ìˆ—
 void SGameMain::Process() {
 
 	switch (StageFlag) {
 	case 0: ChangeGameState(GS_TITLE); break;
-	case 1:	MapData.MapData();  break;
+	case 1:	MapData.Map1(); break;
 	case 2:	MapData.Map2(); break;
 	case 3:	MapData.Map3(); break;
 	case 4: ChangeGameState(GS_TITLE); break;
@@ -13,24 +13,24 @@ void SGameMain::Process() {
 	Draw();
 }
 
-// ãƒ¡ã‚¤ãƒ³ã‚²ãƒ¼ãƒ ã®åˆæœŸåŒ–å‡¦ç†
+// ƒƒCƒ“ƒQ[ƒ€‚Ì‰Šú‰»ˆ—
 void SGameMain::Init() {
 	BgmControl.ChangePlay(BGM_GAMEMAIN);
 }
 
-// æœ€åˆã®å¤‰æ•°ã®åˆæœŸåŒ–
+// Å‰‚Ì•Ï”‚Ì‰Šú‰»
 void SGameMain::FirstInit() {
 	memset(this, 0, sizeof(SGameMain));
 }
 
-// ãƒ­ãƒ¼ãƒ‰
+// ƒ[ƒh
 void SGameMain::Load() {
-	// å„pictureã‚’ãƒ­ãƒ¼ãƒ‰
-	//	Graphic[MG_BACK] = LoadGraph("picture/ã‚²ãƒ¼ãƒ ç”»é¢èƒŒæ™¯pictureæœªå®š.png");
-	Graphic[MG_RESET] = LoadGraph("picture/ã‚„ã‚ŠãªãŠã—.png");
+	// Šepicture‚ğƒ[ƒh
+	//	Graphic[MG_BACK] = LoadGraph("picture/ƒQ[ƒ€‰æ–Ê”wŒipicture–¢’è.png");
+	Graphic[MG_RESET] = LoadGraph("picture/‚â‚è‚È‚¨‚µ.png");
 }
 
-// æç”»
+// •`‰æ
 void SGameMain::Draw() {
 	DrawGraph(608, 448, Graphic[MG_RESET], TRUE);
 //	DrawFormatString(10, 40, GetColor(255, 255, 255), "%d", StageFlag);

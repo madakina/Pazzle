@@ -8,7 +8,6 @@
 #include"GameMain.h"
 #include"Map.h"
 #include"MapConts.h"
-#include"MapData.h"
 #include"Sound.h"
 #include"Title.h"
 #include"Global.h"

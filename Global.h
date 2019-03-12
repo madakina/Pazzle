@@ -27,7 +27,6 @@ GLOBAL int LEFT_Move;
 GLOBAL SGameClear GameClear;
 GLOBAL SGameMain GameMain;
 GLOBAL STitle Title;
-GLOBAL SMapView MapView;
 GLOBAL SMapData MapData;
 GLOBAL SBgmControl BgmControl;
 GLOBAL SSeControl SeControl;
